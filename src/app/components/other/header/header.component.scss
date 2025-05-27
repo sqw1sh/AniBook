@@ -1,0 +1,49 @@
+@use "../../../../styles/color";
+@use "../../../../styles/mixin";
+
+.header {
+  .container {
+    @include mixin.flex(space-between, center);
+    height: 100px;
+    padding-top: 28px;
+
+    .wrapper {
+      @include mixin.flex(start, center);
+      gap: 100px;
+    }
+
+    .logo {
+      span {
+        font-family: "WixMadeforDisplay";
+        font-size: 36px;
+        font-weight: 800;
+
+        &:first-child {
+          color: color.$clr-primary-a0;
+        }
+
+        &:last-child {
+          color: color.$clr-surface-a20;
+        }
+      }
+    }
+
+    .menu {
+      .menu-open {
+        @include mixin.flex(start, center);
+        gap: 5px;
+        cursor: pointer;
+
+        span {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    hr {
+      flex-basis: 100%;
+      margin-top: 27px;
+    }
+  }
+}

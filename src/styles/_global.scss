@@ -1,0 +1,99 @@
+@use "./color";
+@use "./var";
+@use "./font";
+@use "./mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "WixMadeforText";
+}
+
+body {
+  background-color: color.$clr-surface-a0;
+  color: color.$clr-light-a0;
+}
+
+.container {
+  max-width: calc(
+    var.$container-width + var.$container-padding + var.$container-padding
+  );
+  padding-right: var.$container-padding;
+  padding-left: var.$container-padding;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid color.$clr-surface-a10;
+}
+
+.input {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 var.$input-padding;
+  color: color.$clr-light-a0;
+  background-color: color.$clr-surface-a10;
+  height: var.$input-height;
+  width: var.$input-width;
+  border-radius: var.$border-radius;
+  border: 1px solid transparent;
+  outline: 0;
+
+  &.input-search {
+    width: var.$input-wide-width;
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    color: color.$clr-surface-a50;
+  }
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  height: var.$btn-height;
+  width: var.$btn-width;
+  border-radius: var.$border-radius;
+  border: 1px solid transparent;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.25s;
+  transform: scale(1);
+
+  &.btn-fill {
+    color: color.$clr-dark-a0;
+    background-color: color.$clr-primary-a10;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: color.$clr-primary-a20;
+    }
+  }
+
+  &.btn-empty {
+    background-color: transparent;
+    color: color.$clr-light-a0;
+    border-color: color.$clr-primary-a10;
+    transition: 0.25s;
+
+    &:hover {
+      border-color: color.$clr-primary-a20;
+    }
+  }
+
+  &.btn-wide {
+    width: var.$btn-wide-width;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
