@@ -1,0 +1,46 @@
+@use "../../../../styles/color";
+@use "../../../../styles/mixin";
+
+.footer {
+  .container {
+    @include mixin.flex(space-between, center);
+    height: 100px;
+    padding-bottom: 37px;
+
+    hr {
+      flex-basis: 100%;
+      margin-bottom: 37px;
+    }
+
+    .copyright {
+      font-size: 14px;
+      font-weight: 500;
+      color: color.$clr-surface-a50;
+    }
+
+    .menu {
+      .menu-list {
+        @include mixin.flex(start, center);
+        gap: 15px;
+        list-style: none;
+
+        .list-item {
+          .link {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .link-contact {
+      font-size: 14px;
+      font-weight: 500;
+      color: color.$clr-surface-a50;
+
+      &:hover {
+        color: color.$clr-light-a0;
+      }
+    }
+  }
+}
