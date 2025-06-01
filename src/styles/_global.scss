@@ -8,7 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "WixMadeforText";
+  font-family: "WixMadeforText", sans-serif;
 }
 
 body {
@@ -68,6 +68,10 @@ hr {
   transition: 0.25s;
   transform: scale(1);
 
+  &:active {
+    transform: scale(0.95);
+  }
+
   &.btn-fill {
     color: color.$clr-dark-a0;
     background-color: color.$clr-primary-a10;
@@ -92,10 +96,6 @@ hr {
   &.btn-wide {
     width: var.$btn-wide-width;
   }
-
-  &:active {
-    transform: scale(0.95);
-  }
 }
 
 .link {
@@ -107,5 +107,13 @@ hr {
 
   &:hover {
     color: color.$clr-primary-a20;
+  }
+
+  &.link-reverse {
+    color: color.$clr-primary-a20;
+
+    &:hover {
+      color: color.$clr-light-a0;
+    }
   }
 }

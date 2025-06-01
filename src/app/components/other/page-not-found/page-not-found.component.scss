@@ -1,0 +1,29 @@
+@use "../../../../styles/color";
+@use "../../../../styles/mixin";
+
+.not-found {
+  height: calc(100vh - 200px);
+
+  .container {
+    height: 100%;
+    @include mixin.flex(center, center);
+    flex-direction: column;
+
+    h1 {
+      font-family: "WixMadeforDisplay", sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      color: color.$clr-surface-a50;
+
+      .link {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+    }
+  }
+}
