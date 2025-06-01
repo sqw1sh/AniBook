@@ -34,6 +34,30 @@ hr {
   border-top: 1px solid color.$clr-surface-a10;
 }
 
+.input-group {
+  position: relative;
+
+  .input {
+    height: 50px;
+  }
+
+  .input:focus + span {
+    top: 2px;
+  }
+
+  .label {
+    top: calc(50% - 7.5px);
+    left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: color.$clr-surface-a50;
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.25s;
+  }
+}
+
 .input {
   font-size: 16px;
   font-weight: 500;
@@ -53,6 +77,42 @@ hr {
   &::placeholder {
     font-weight: 500;
     color: color.$clr-surface-a50;
+  }
+}
+
+.input-checkbox {
+  @include mixin.flex(start, center);
+  gap: 10px;
+
+  .checkbox {
+    position: relative;
+    opacity: 1;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    &:checked {
+      &::before {
+        background-image: url("../../public/icons/Checkbox_Check.svg");
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../public/icons/Checkbox_Unchecked.svg");
+      background-size: cover;
+    }
+  }
+
+  .label {
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 

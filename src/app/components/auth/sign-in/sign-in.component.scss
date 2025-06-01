@@ -1,0 +1,46 @@
+@use "../../../../styles/color";
+@use "../../../../styles/mixin";
+
+.sign-in {
+  height: calc(100vh - 200px);
+  .container {
+    height: 100%;
+    @include mixin.flex(center, center);
+
+    .wrapper {
+      max-width: 255px;
+      margin: 0 auto;
+    }
+
+    .form {
+      .form-title {
+        font-family: "WixMadeforDisplay", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      .input-checkbox {
+        margin-bottom: 15px;
+      }
+
+      .form-extra {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: color.$clr-surface-a50;
+
+        .link {
+          font-size: inherit;
+          font-weight: inherit;
+        }
+      }
+    }
+  }
+}

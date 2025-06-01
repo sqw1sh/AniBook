@@ -1,0 +1,31 @@
+<section class="sign-in form-page">
+  <div class="container">
+    <form class="form">
+      <h1 class="form-title">Авторизация</h1>
+      <div class="wrapper">
+        <div class="input-group">
+          <input type="text" class="input" appInputGroup />
+          <span class="label">Почта</span>
+        </div>
+        <div class="input-group">
+          <input type="password" class="input" appInputGroup />
+          <span class="label">Пароль</span>
+        </div>
+        <div class="input-checkbox">
+          <input type="checkbox" class="checkbox" id="check" />
+          <label class="label" for="check">Запомнить вход</label>
+        </div>
+        <button type="button" class="btn btn-fill btn-wide">Войти</button>
+        <p class="form-extra">
+          <span>У вас нет аккаунта? </span>
+          <a
+            [routerLink]="['/signup']"
+            routerLinkActive="router-link-active"
+            class="link"
+            >Регистрация</a
+          >
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
